@@ -24,7 +24,7 @@
     }
   },
   "variables": {
-    "storageAccountName": "storageaccount01971_1771875775808"
+    "storageAccountName": "storageaccount01971"
   },
   "resources": [
     {

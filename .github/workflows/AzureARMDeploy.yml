@@ -24,7 +24,7 @@ jobs:
         with:
             inlineScript: |
                 az deployment group create \
-                --name storageaccount01971_1771875775808 \
+                --name storageaccount01971 \
                 --resource-group DockerTests \
                 --template-file storageaccount.json \
                 --parameters storageAccountType=Standard_GRS
