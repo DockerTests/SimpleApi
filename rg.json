@@ -1,0 +1,11 @@
+{
+  "ResourceGroupName": "DockerTests",
+  "Location": "eastus",
+  "ProvisioningState": "Succeeded",
+  "Tags": null,
+  "TagsTable": null,
+  "ResourceId": "/subscriptions/34352192-2e1e-421f-bcdf-a68cdfe90f8c/resourceGroups/DockerTests",
+  "ManagedBy": null,
+  "CreatedTime": null,
+  "ChangedTime": null
+}

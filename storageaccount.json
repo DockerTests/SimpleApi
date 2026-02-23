@@ -25,6 +25,7 @@
   },
   "variables": {
     //[replace(toLower(resourceGroup().name), '-', '')]
+    ///subscriptions/34352192-2e1e-421f-bcdf-a68cdfe90f8c/resourceGroups/DockerTests
     "storageAccountName": "[concat('store', uniquestring(resourceGroup().id))]"
   },
   "resources": [

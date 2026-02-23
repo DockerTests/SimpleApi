@@ -18,18 +18,20 @@ jobs:
            
       - name: Checkout source code
         uses: actions/checkout@v2
+
 # I think these are overwritten by values in storageaccount.json
       - name: Deploy ARM Template
         uses: azure/CLI@v1
         with:
             inlineScript: |
-                echo "Creating web app: ${{ parameters.location }} in resource group: ${{ parameters.storageAccountName }}"
                 az deployment group create \
                 --name storageaccount01971 \
                 --resource-group DockerTests \
                 --template-file storageaccount.json \
                 --parameters storageAccountType=Standard_LRS
 
+
+#        /subscriptions/34352192-2e1e-421f-bcdf-a68cdfe90f8c/resourceGroups/DockerTests
 
 # storageaccount01971
 # storageaccount01971_1771875775808
