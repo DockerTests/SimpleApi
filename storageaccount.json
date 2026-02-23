@@ -26,8 +26,26 @@
       }
     }
   },
-  "variables": {},
-  "functions": [],
-  "resources": [], /* or "resources": { } with languageVersion 2.0 */
-  "outputs": {}
+  "variables": {
+    "storageAccountName" : "replace(toLower(resourceGroup().name), '-', '')]"
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2019-04-01",
+      "name": "[variables('storageAccountName')]",
+      "location": "[parameters('location')]",
+      "sku": {
+        "name": "[parameters('storageAccountType')]"
+      },
+      "kind": "StorageV2",
+      "properties": {}
+    }
+  ],
+  "outputs": {
+    "storageAccountName": {
+      "type": "string",
+      "value": "[variables('storageAccountName')]"
+    }
+  }
 }

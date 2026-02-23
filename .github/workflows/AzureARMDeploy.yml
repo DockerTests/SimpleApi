@@ -15,11 +15,11 @@ jobs:
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-
+           
       - name: Checkout source code
         uses: actions/checkout@v2
 
-      - name: Deploy ARM Template - Try again
+      - name: Deploy ARM Template
         uses: azure/CLI@v1
         with:
             inlineScript: |
