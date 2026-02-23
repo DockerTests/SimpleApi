@@ -16,6 +16,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{540D80CE-131E-4F8F-B4D3-B1AE15BFDA24}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{D47B7542-2B8B-4D7A-AFB0-459DEB23E2A8}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\AzureARMDeploy.yml = .github\workflows\AzureARMDeploy.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "armtemplates", "armtemplates", "{2BEB72E6-54E7-4DC8-A3D9-40ED5CA654B3}"
+	ProjectSection(SolutionItems) = preProject
+		storageaccount.json = storageaccount.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +45,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{540D80CE-131E-4F8F-B4D3-B1AE15BFDA24} = {8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}
+		{D47B7542-2B8B-4D7A-AFB0-459DEB23E2A8} = {540D80CE-131E-4F8F-B4D3-B1AE15BFDA24}
+		{2BEB72E6-54E7-4DC8-A3D9-40ED5CA654B3} = {8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {967B55C4-65AE-4E64-878D-3CBF70C2AF6B}
