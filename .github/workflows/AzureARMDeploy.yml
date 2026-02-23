@@ -18,7 +18,7 @@ jobs:
            
       - name: Checkout source code
         uses: actions/checkout@v2
-
+# I think these are overwritten by values in storageaccount.json
       - name: Deploy ARM Template
         uses: azure/CLI@v1
         with:

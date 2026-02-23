@@ -44,6 +44,10 @@
     "storageAccountName": {
       "type": "string",
       "value": "[variables('storageAccountName')]"
+    },
+    "DavidsLastName": {
+      "type": "string",
+      "value": "Morello"
     }
   }
 }
