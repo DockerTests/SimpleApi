@@ -26,7 +26,7 @@ jobs:
                 az deployment group create \
                 --name StorageAccountDeployment \
                 --resource-group DockerTests \
-                --template-file armtemplates/storageaccount.json \
+                --template-file /armtemplates/storageaccount.json \
                 --parameters storageAccountType=Standard_GRS
 
 # # This is a basic workflow to help you get started with Actions
