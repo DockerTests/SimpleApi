@@ -12,29 +12,32 @@
         "Premium_LRS"
       ],
       "metadata": {
-        "description": "Storage Account Type"
+        "description": "Storage Account type"
       }
     },
     "location": {
       "type": "string",
-      "defaultValue": "eastus",
+      "defaultValue": "[resourceGroup().location]",
       "metadata": {
         "description": "Location for all resources"
       }
     }
   },
   "variables": {
-    "storageAccountName": "storageaccount01971" },
+    //[replace(toLower(resourceGroup().name), '-', '')]
+    "storageAccountName": "[concat('store', uniquestring(resourceGroup().id))]"
+  },
   "resources": [
     {
       "type": "Microsoft.Storage/storageAccounts",
+      "name": "[variables('storageAccountName')]",
+      "location": "[parameters('location')]",
       "apiVersion": "2021-06-01",
-      "name": "storageaccount01971",
-      "location": "eastus",
       "sku": {
-        "name": "Standard_LRS"
+        "name": "[parameters('storageAccountType')]"
       },
-      "kind": "StorageV1"
+      "kind": "StorageV2",
+      "properties": {}
     }
   ],
   "outputs": {
@@ -45,8 +48,9 @@
   }
 }
 
-
-/*{
+/*
+  https://gist.github.com/goyalmohit/ca70159ad70daa34b152b31198d1fbbe
+  {
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
@@ -72,7 +76,7 @@
     }
   },
   "variables": {
-    "storageAccountName": "replace(toLower(resourceGroup().name), '-', '')]"
+    "storageAccountName": "[replace(toLower(resourceGroup().name), '-', '')]"
   },
   "resources": [
     {
