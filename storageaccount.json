@@ -17,7 +17,7 @@
     },
     "location": {
       "type": "string",
-      "": "[resourceGroup().location]",
+      "defaultValue": "[resourceGroup().location]",
       "metadata": {
         "description": "Location for all resources"
       }
@@ -25,7 +25,6 @@
   },
   "variables": {
     //[replace(toLower(resourceGroup().name), '-', '')]
-    ///subscriptions/34352192-2e1e-421f-bcdf-a68cdfe90f8c/resourceGroups/DockerTests
     "storageAccountName": "[concat('store', uniquestring(resourceGroup().id))]"
   },
   "resources": [
@@ -45,6 +44,10 @@
     "storageAccountName": {
       "type": "string",
       "value": "[variables('storageAccountName')]"
+    },
+    "DavidsLastName": {
+      "type": "string",
+      "value": "Morello"
     }
   }
 }
