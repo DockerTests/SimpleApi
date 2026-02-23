@@ -29,14 +29,13 @@
   "resources": [
     {
       "type": "Microsoft.Storage/storageAccounts",
-      "apiVersion": "2025-06-01",
+      "apiVersion": "2021-06-01",
       "name": "storageaccount01971",
       "location": "eastus",
       "sku": {
         "name": "Standard_LRS"
       },
-      "kind": "StorageV2",
-      "properties": {}
+      "kind": "StorageV1"
     }
   ],
   "outputs": {
