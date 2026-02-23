@@ -23,6 +23,7 @@ jobs:
         uses: azure/CLI@v1
         with:
             inlineScript: |
+                echo "Creating web app: ${{ parameters.location }} in resource group: ${{ parameters.storageAccountName }}"
                 az deployment group create \
                 --name storageaccount01971 \
                 --resource-group DockerTests \
