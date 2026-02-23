@@ -24,13 +24,14 @@ jobs:
         with:
             inlineScript: |
                 az deployment group create \
-                --name storageaccount01971 \
+                --name storageaccount01971_1771875775808 \
                 --resource-group DockerTests \
                 --template-file storageaccount.json \
                 --parameters storageAccountType=Standard_GRS
 
 
 # storageaccount01971
+# storageaccount01971_1771875775808
 # # This is a basic workflow to help you get started with Actions
 # 
 # name: CI
