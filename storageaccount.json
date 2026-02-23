@@ -24,8 +24,7 @@
     }
   },
   "variables": {
-    "storageAccountName": "storageaccount01971"
-  },
+    "storageAccountName": "storageaccount01971" },
   "resources": [
     {
       "type": "Microsoft.Storage/storageAccounts",
